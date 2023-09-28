@@ -23,21 +23,10 @@
               [(ngModel)]="user.password">
             </ion-input>
 
-            <ion-content>
-           
               <ion-item>
-                <ion-label>Recordar Contraseña</ion-label>
-                <ion-toggle [(ngModel)]="recordarContrasena"></ion-toggle>
-              </ion-item>
-            
-              <!-- Botón de inicio de sesión -->
-              <ion-button expand="full" (click)="iniciarSesion()">Iniciar Sesión</ion-button>
-            </ion-content>
-            
-
-
-
           </ion-item><br>
+          <ion-label>Recordar Contraseña</ion-label>
+                <ion-toggle [(ngModel)]="recordarContrasena"></ion-toggle>
           <ion-button shape="round" size="small" [routerLink]="['/registroalumnobase']">Registrar Alumno</ion-button><br>
           <ion-button shape="round" size="small" [routerLink]="['/pagmaqueta']">Iniciar Sesion</ion-button><br>
 
