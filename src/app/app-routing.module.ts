@@ -54,7 +54,11 @@ const routes: Routes = [
   {
     path: 'pagmaqueta',
     loadChildren: () => import('./pagmaqueta/pagmaqueta.module').then( m => m.PagmaquetaPageModule)
+  },  {
+    path: 'pruebanuevo',
+    loadChildren: () => import('./pruebanuevo/pruebanuevo.module').then( m => m.PruebanuevoPageModule)
   },
+
 ];
 
 @NgModule({
