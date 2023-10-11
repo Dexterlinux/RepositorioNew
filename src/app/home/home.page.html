@@ -27,7 +27,8 @@
           <ion-label>Recordar Contraseña</ion-label>
                 <ion-toggle [(ngModel)]="recordarContrasena"></ion-toggle>
           <ion-button shape="round" size="small" [routerLink]="['/registroalumnobase']">Registrar Alumno</ion-button><br>
-          <ion-button shape="round" size="small" [routerLink]="['/pagmaqueta']">Iniciar Sesion</ion-button><br>
+          <ion-button expand="block" shape="round" (click)="GoPagmaqueta()">Iniciar Sesion</ion-button>
+          
 
 
         </ion-list>

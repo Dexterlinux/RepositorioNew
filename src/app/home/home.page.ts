@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular'; // Importa AlertController para usar cuadros de diálogo
+import { Router, NavigationExtras } from '@angular/router';
+import { AlertController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ import { AlertController } from '@ionic/angular'; // Importa AlertController par
 export class HomePage {
   constructor(
     private router: Router,
-    private alertController: AlertController // Agrega AlertController
+    private alertController: AlertController
   ) {}
 
   user = {
@@ -25,7 +26,6 @@ export class HomePage {
     if (this.user.usuario !== '' && this.user.password !== '') {
       this.campo = 'Usuario Existente';
       if (this.recordarContrasena) {
-        // Lógica para recordar la contraseña si el toggle está activado
         console.log('Contraseña recordada');
         // Agrega aquí la lógica para recordar la contraseña, como almacenarla en una cookie o localStorage
       }
@@ -35,4 +35,13 @@ export class HomePage {
   }
 
   public alertButtons = ['OK'];
+
+  GoPagmaqueta() {
+    let navigationExtras: NavigationExtras = {
+      state: {
+        user: this.user
+      }
+    };
+    this.router.navigate(['/pagmaqueta'], navigationExtras);
+  }
 }
